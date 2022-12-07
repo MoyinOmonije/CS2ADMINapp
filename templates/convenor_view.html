@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Convenor Welcome</title><!--What appears on browser tab-->
+        <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <nav>
+                <a href="{% url 'convenorpage' %}"><img src="{% static 'images/cslogo2.png' %}"></a>
+                <ul>
+                    <li><a href="{% url 'convenor' %}">Menu</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            </nav>   
+            <div class="text-box">
+                <h1>Hello {{ user.username }}!</h1>
+                <p>Just to let you know, your role is convenor.</p>
+                <a href="{% url 'convenor' %}">Convenor Menu</a>
+            </div>
+            <div class="image-box">
+                <img src="{% static 'images/filepic.png' %}">
+            </div> 
+        </div>
+    </body>
+</html>
+

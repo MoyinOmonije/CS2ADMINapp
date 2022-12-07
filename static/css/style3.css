@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section{
+    width: 100%;
+    height: 100vh; /*viewport height*/
+    padding: 0 10%;
+    background: #344647;
+}
+
+.section .container{
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px;
+}

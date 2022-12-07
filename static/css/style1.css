@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100vh; /*viewport height*/
+    padding: 0 10%;
+    background: #344647;
+}
+
+.header .container1{
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px;
+}
+
+.header .container1 h1,
+.header .container1 h3,
+.header .container1 p{
+    color: white;
+}
+
+
+.header .container1 .image-section img{
+    width: 300px;
+}
+
+.container1 .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container1 .title h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #08cc8e;
+}
+
+.container1 .title h1::after{
+    content: "";
+    height: 5px;
+    width: 100px;
+    background-color: #08cc8e;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+}
+
+.content{
+    float: left;
+    width: 55%;
+}
+
+.content .button a{
+    text-decoration: none;
+    text-decoration: underline;
+    color: #08cc8e;
+}
+
+.image-section{
+    float: right;
+    width: 40%;
+}
+
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+    z-index: 100;
+}
+
+nav img{
+    height: 130px;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #08cc8e;/*#0CF5E0*/
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    margin-top: 130px;
+    max-width: 600px;
+}
+
+.text-box h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.text-box p{
+    color: white;
+}
+
+.text-box a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background: #cfd1d4;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-top: 50px;
+    border-radius: 6px;
+}
+
+.image-box img{
+    display: block;
+    margin-top: 150px;
+    width: 460px;
+    margin-bottom: -205px;
+    z-index: 1;
+}
+
+.image-box{
+    position: absolute;
+    top: 0;
+    right: 12%;
+}
+
+/*index.html end*/
+
+
+/*convenor*/
+.header .conv-title h1,
+.header .conv-title p{
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.header .conv-title h1{
+    font-size: 45px;
+}
+
+.header .conv-title p{
+    font-size: 20px;
+}
+
+.header .btn{
+    background-color: #fffdfd;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 2rem;
+    height: 7rem;
+    text-align: center;
+    
+}
+
+.header .btn-grid{
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.header .btn-grid a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 600px) {
+    .header .btn-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 900px) {
+    .header .btn-grid { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+/*convenor end*/
+
+/*upload student marks*/
+.header .container{
+    padding-top: 200px;
+    color: white;
+}
+
+.header .container h1{
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.navigation button{
+    margin-top: 200px;
+    margin-left: 90%;
+}
+
+@media (min-width: 900px) {
+    .header .upl-sec { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+

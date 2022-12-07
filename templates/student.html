@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student page</title>
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <a href="{% url 'studentpage' %}"><img src="{% static 'images/cslogo2.png' %}"></a>
+        </nav>
+        <div class="conv-title">
+            <h1>Welcome {{user.username}}</h1>
+            <br>
+            <p>What would you like to do today?</p>
+        </div>
+        <div class="btn-grid">
+            <div class="btn"><a href="{% url 'requestMedical' %}">Make a medical request</a></div>
+            <div class="btn"><a href="{% url 'requestCompassionate' %}">Make a compassionate request</a></div>
+            <div class="btn"><a href="{% url 'sendQuery' %}">Send a query</a></div>
+            <div class="btn"><a href="{% url 'studentSeeResponse' %}">Check status of query/request</a></div>
+            <div class="btn"><a href="{% url 'studentSeeMedicalResponse' %}">Check status of Medical Request</a></div>
+            <div class="btn"><a href="{% url 'studentSeeCompassionateResponse' %}">Check status of Compassionate Request</a></div>
+            <div class="btn"><a href="{% url 'generalHelp' %}">General Help</a></div>
+            <div class="btn"><a href="{% url 'studentpage' %}">Exit</a></div>
+
+        </div>
+    </div>
+     
+    
+</body>
+</html>

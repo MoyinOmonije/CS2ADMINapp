@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convenor View</title>
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+        <nav>
+            <a href="{% url 'convenorpage' %}"><img src="{% static 'images/cslogo2.png' %}"></a>
+        </nav>
+        <div class="conv-title">
+            <h1>View Analysis, Tutor management and Tutor allocation</h1>
+            <br>
+            <p>View functionality from previous page</p>
+        </div>
+        <div class="btn-grid">
+            <div class="btn"><a href="{% url 'viewAnalysis' %}">View student analysis</a></div>
+            <div class="btn"><a href="{% url 'tutorStats' %}">Tutor Stats</a></div>
+            <div class="btn"><a href="{% url 'allocationComplete' %}">Randomise allocation of tutors</a></div>
+            <div class="btn"><a href="{% url 'convenorpage' %}">Exit</a></div>
+        </div>  
+
+
+</body>
+</html>

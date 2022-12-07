@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Query</title>
+    <link rel="stylesheet" href="{% static 'css/myStyle.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <a href="{% url 'studentpage' %}"><img src="{% static 'images/cslogo2.png' %}"></a>
+        </nav>
+        <div class="conv-title">
+            <h1>Send Query</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Create" onclick="showMessage();">
+                    </form>          
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="navigation">
+            <button align="left"><a href="{% url 'student' %}">Back</a></button>
+        </div>
+    </div>
+
+   
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script type = "text/JavaScript">
+    function showMessage() {
+        alert("Your query has been submitted");
+    }
+</script>
+</body>
+</html>

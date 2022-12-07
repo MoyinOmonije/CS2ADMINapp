@@ -1,0 +1,18 @@
+{% load static %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Morning timeE</th> 
+        <th>Evening time</th>
+        <th>Difference in hours</th>
+    </tr>
+        {% for line in data %}
+    <tr>
+        <td>{{line.0}}</td>
+        <td>{{line.1}}</td>
+        <td>{{line.2}}</td>
+        <td>{{line.3}}</td>
+    
+        </tr>
+        {% endfor %}
+    </table>

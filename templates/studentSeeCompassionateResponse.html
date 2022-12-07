@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Query</title>
+    <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <table class="center">
+        <tr>
+            <th>Student</th>
+            <th>Status</th>
+            <th>Response</th>
+        </tr>
+            {% for item in data_List %}
+        <tr>
+            <td>{{item.studentNumber}}</td>
+            <td>{{item.status}}</td>
+            <td>{{item.responseMessage}}</td>
+        </tr>
+            {% endfor %}
+    </table>
+    <button><a href="{% url 'student' %}">Back</a></button>
+</body>
+</html>

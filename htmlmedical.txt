@@ -1,0 +1,28 @@
+<div class="col">
+                    <h1>Upload Medical certificate</h1>
+                    <form action="/action_page.php"  method = "POST">
+                        {% csrf_token %}
+                        <input type="file" id="myFile" name="medicalCertificate">
+                    </form>
+                </div>
+                <div class="col">
+                    <h1>Specify number of extension days</h1>
+                    <input type="text" id="Name" name="extensionDays" placeholder="Type a number...">
+                </div>
+                <div class="col">
+                    <h1>Further details (if necessay)</h1>
+                    <textarea id="freeform" name="queryDetails" rows="4" cols="50">
+                        Type in a message...
+                        </textarea> 
+                        <input type="submit" class = "btn">          
+                </div>
+
+table_data = []
+    for user in table_data:
+        student = MedicalQueries.student
+        medicalCertificate = MedicalQueries.medicalCertificate
+        extensionDays = MedicalQueries.extensionDays
+        queryDetails = MedicalQueries.queryDetails
+        table_data.append((student,medicalCertificate,extensionDays,queryDetails))
+    #dict = {'main_data': main_data}
+    return render(request, 'medicalCertificatesStudent.html', {'data' : table_data})

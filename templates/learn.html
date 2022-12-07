@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+    <head>
+        <title>Learn</title><!--What appears on browser tab-->
+        <link rel="stylesheet" href="{% static 'css/myStyle.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <body>
+        <div class="header">
+            <nav>
+                <a href="/"><img src="{% static 'images/cslogo2.png' %}"></a>
+            </nav>
+            <div class="container1">
+                <div class="title">
+                    <h1>About CS2 ADMIN</h1>
+                </div>
+                <div class="content">
+                    <div class="article">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies, nibh 
+                            cursus tincidunt scelerisque, justo nisl dictum nibh, ac imperdiet dolor libero at dolor. 
+                            Ut venenatis suscipit venenatis. </h3>
+                        <p>Morbi et sodales tellus, ut scelerisque leo. Donec tincidunt 
+                            et urna a porttitor. Nulla varius nunc mauris, non scelerisque ligula malesuada eu. Nam sit amet finibus dolor, 
+                            in porttitor nulla.</p>
+                        <div class="button">
+                            <a href="/">Get Started!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src = "{% static 'images/signuppic_white.png' %}">
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+
