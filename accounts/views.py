@@ -16,8 +16,6 @@ from .user_classes import *
 from .models import *
 import openpyxl
 import pandas as pd  # allows us to access the spreadsheet
-from tkinter import Tk  # allows the user to see file upload dialogue
-from tkinter.filedialog import askopenfilename
 import time
 from datetime import date
 import sqlite3 as sl
