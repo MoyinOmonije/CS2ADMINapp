@@ -3,3 +3,5 @@ A Django web application that acts as a mock of a cs2 administration system prov
 
 
 The web app is accessible from : https://role-based-login-system.herokuapp.com/
+
+# Heroku hosting plan expired.
